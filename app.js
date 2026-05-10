@@ -593,11 +593,7 @@
         isFallback ? "warn" : "success"
       );
     } else if (isFallback) {
-      setStatus(
-        status,
-        "Live API down hai. Admin ke fallback products dikhaye ja rahe hain.",
-        "warn"
-      );
+      setStatus(status, "", "");
     } else if (categoryFilter) {
       setStatus(
         status,
@@ -962,10 +958,7 @@
     if (API.allowFallbackWhenApiDown && CATEGORY_MENU.length) {
       renderCategoryCardsOnPage(CATEGORY_MENU);
       initCategoryLinks();
-      setCategoryStatus(
-        "Live category API unavailable. Showing fallback categories.",
-        "warn"
-      );
+      setCategoryStatus("", "");
       return;
     }
 
